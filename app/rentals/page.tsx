@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_LINK =
-  "https://wa.me/23057581799?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20book%20a%20scooter%2C%20motorbike%20or%20car%20rental%20in%20Mauritius.%20Please%20share%20availability%2C%20prices%20and%20rental%20conditions.";
+  "https://wa.me/23057014922?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20book%20a%20scooter%2C%20motorbike%20or%20car%20rental%20in%20Mauritius.%20Please%20share%20availability%2C%20prices%20and%20rental%20conditions.";
 
 export default function RentalsPage() {
   const rentalsSchema = {
