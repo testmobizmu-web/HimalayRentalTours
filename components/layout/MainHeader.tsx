@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
@@ -20,11 +20,6 @@ export function MainHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
   return (
     <header className="sticky top-0 z-40">
       {/* Announcement bar */}
@@ -36,38 +31,41 @@ export function MainHeader() {
           </p>
           <div className="flex items-center gap-2">
             <span className="hidden sm:inline text-white/80">Follow us:</span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
               <a
                 href="#"
-                className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+                aria-label="Visit our Facebook page"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
               >
                 <Image
                   src="/images/social/facebook.png"
-                  alt="Facebook"
-                  width={14}
-                  height={14}
+                  alt=""
+                  width={18}
+                  height={18}
                 />
               </a>
               <a
                 href="#"
-                className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+                aria-label="Visit our Instagram profile"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
               >
                 <Image
                   src="/images/social/instagram.png"
-                  alt="Instagram"
-                  width={14}
-                  height={14}
+                  alt=""
+                  width={18}
+                  height={18}
                 />
               </a>
               <a
                 href="#"
-                className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+                aria-label="Visit our TikTok profile"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
               >
                 <Image
                   src="/images/social/tiktok.png"
-                  alt="TikTok"
-                  width={14}
-                  height={14}
+                  alt=""
+                  width={18}
+                  height={18}
                 />
               </a>
             </div>
@@ -79,7 +77,12 @@ export function MainHeader() {
       <div className="border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mbz-container flex items-center justify-between gap-4 py-3">
           {/* Logo + brand */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex items-center gap-3"
+            aria-label="Go to homepage"
+            onClick={() => setMenuOpen(false)}
+          >
             <div className="relative h-10 w-10 sm:h-12 sm:w-12 rounded-full border border-sky-200 bg-slate-50 overflow-hidden">
               <Image
                 src="/images/logo/logohimalayrentaltours.jpg"
@@ -100,7 +103,10 @@ export function MainHeader() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6 text-xs font-medium text-slate-700">
+          <nav
+            className="hidden md:flex items-center gap-6 text-xs font-medium text-slate-700"
+            aria-label="Primary navigation"
+          >
             {NAV_ITEMS.map((item) => {
               const active =
                 item.href === "/"
@@ -131,13 +137,15 @@ export function MainHeader() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-4 py-2 text-xs font-semibold text-white shadow-md hover:opacity-90 transition"
+              aria-label="Open WhatsApp to plan my Mauritius holiday"
             >
               <span className="relative h-4 w-4">
                 <Image
                   src="/images/social/whatsapp.png"
-                  alt="WhatsApp"
+                  alt=""
                   fill
                   className="object-contain"
+                  sizes="16px"
                 />
               </span>
               WhatsApp booking
@@ -148,8 +156,8 @@ export function MainHeader() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm"
-            aria-label="Toggle menu"
+            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             <span className="sr-only">Toggle menu</span>
             <div className="space-y-1.5">
@@ -172,7 +180,7 @@ export function MainHeader() {
           </button>
         </div>
 
-        {/* Mobile menu panel – NOW REMOVED FROM LAYOUT WHEN CLOSED */}
+        {/* Mobile menu panel – only in DOM when open */}
         {menuOpen && (
           <div className="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur">
             <div className="mbz-container py-3 flex flex-col gap-2 text-sm">
@@ -186,6 +194,7 @@ export function MainHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={() => setMenuOpen(false)}
                     className={`py-1.5 ${
                       active ? "text-sky-800 font-semibold" : "text-slate-700"
                     }`}
@@ -199,14 +208,17 @@ export function MainHeader() {
                 href="https://wa.me/23057014922?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Mauritius%20holiday."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-4 py-2 text-xs font-semibold text-white shadow-md hover:opacity-90 transition"
+                aria-label="Open WhatsApp to plan my Mauritius holiday"
               >
                 <span className="relative h-4 w-4">
                   <Image
                     src="/images/social/whatsapp.png"
-                    alt="WhatsApp"
+                    alt=""
                     fill
                     className="object-contain"
+                    sizes="16px"
                   />
                 </span>
                 WhatsApp booking

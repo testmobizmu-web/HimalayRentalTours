@@ -19,7 +19,10 @@ export default function ContactPage() {
       <section className="border-b border-slate-200 bg-gradient-to-br from-sky-100 via-teal-50 to-emerald-50">
         <div className="mbz-container py-8 md:py-10 space-y-6">
           {/* Breadcrumbs */}
-          <div className="flex items-center justify-between text-[11px] text-slate-600">
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center justify-between text-[11px] text-slate-600"
+          >
             <div className="flex items-center gap-1">
               <Link
                 href="/"
@@ -27,7 +30,7 @@ export default function ContactPage() {
               >
                 Home
               </Link>
-              <span>›</span>
+              <span aria-hidden="true">›</span>
               <span className="text-slate-500">Contact Us</span>
             </div>
             <Link
@@ -36,7 +39,7 @@ export default function ContactPage() {
             >
               ← Back to homepage
             </Link>
-          </div>
+          </nav>
 
           {/* Hero text */}
           <div className="grid gap-8 md:grid-cols-[1.4fr,1fr] md:items-center">
@@ -61,7 +64,10 @@ export default function ContactPage() {
             </div>
 
             {/* Mini contact accent card */}
-            <div className="rounded-3xl border border-sky-200 bg-white/80 shadow-md p-4 sm:p-5 text-xs sm:text-sm text-slate-700 space-y-3">
+            <aside
+              aria-label="Quick contact overview"
+              className="rounded-3xl border border-sky-200 bg-white/80 shadow-md p-4 sm:p-5 text-xs sm:text-sm text-slate-700 space-y-3"
+            >
               <h2 className="font-semibold text-slate-900 text-sm sm:text-base">
                 Quick contact overview
               </h2>
@@ -96,11 +102,12 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-4 py-2 text-[11px] font-semibold text-white shadow-md hover:opacity-90 transition"
+                aria-label="Chat with Himalay Rental Tours on WhatsApp"
               >
                 <span className="relative h-4 w-4">
                   <Image
                     src="/images/social/whatsapp.png"
-                    alt="WhatsApp icon"
+                    alt=""
                     fill
                     className="object-contain"
                     sizes="16px"
@@ -108,12 +115,12 @@ export default function ContactPage() {
                 </span>
                 Chat on WhatsApp now
               </a>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      {/* MAIN CONTACT LAYOUT – CONTACT CARDS + FORM (same BookingForm as homepage) */}
+      {/* MAIN CONTACT LAYOUT – CONTACT CARDS + FORM */}
       <section className="border-b border-slate-200 bg-white">
         <div className="mbz-container py-10 space-y-8">
           <div className="grid gap-8 lg:grid-cols-[1.1fr,1.2fr]">
@@ -125,10 +132,10 @@ export default function ContactPage() {
                 <div className="rounded-2xl border border-sky-100 bg-sky-50/70 p-4 flex flex-col justify-between shadow-sm">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <div className="relative h-6 w-6">
+                      <div className="relative h-6 w-6" aria-hidden="true">
                         <Image
                           src="/images/social/whatsapp.png"
-                          alt="WhatsApp icon"
+                          alt=""
                           fill
                           sizes="24px"
                           className="object-contain"
@@ -152,9 +159,12 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-[11px] font-semibold text-sky-700 border border-sky-200 hover:bg-sky-50 transition"
+                      aria-label="Open WhatsApp chat with Himalay Rental Tours"
                     >
                       <span>Open WhatsApp chat</span>
-                      <span className="text-[12px]">➜</span>
+                      <span className="text-[12px]" aria-hidden="true">
+                        ➜
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -179,7 +189,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Location & map style block */}
+              {/* Location block */}
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5 space-y-3">
                 <h3 className="font-semibold text-slate-900 text-sm sm:text-base">
                   Where we are based in Mauritius
@@ -191,7 +201,10 @@ export default function ContactPage() {
                 </p>
                 <div className="mt-2 rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-100 via-teal-50 to-emerald-50 p-3 text-[11px] text-slate-700">
                   <p className="font-semibold text-slate-900 mb-1 flex items-center gap-2">
-                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-sky-500 text-[11px] text-white">
+                    <span
+                      className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-sky-500 text-[11px] text-white"
+                      aria-hidden="true"
+                    >
                       📍
                     </span>
                     Service area
@@ -206,7 +219,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* RIGHT – Booking form (same as homepage) */}
+            {/* RIGHT – Booking form */}
             <div className="space-y-4">
               <div className="space-y-2">
                 <h2 className="text-xl sm:text-2xl font-semibold text-slate-900">
@@ -330,11 +343,12 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:opacity-90 transition"
+              aria-label="Start a WhatsApp conversation with Himalay Rental Tours"
             >
               <span className="relative h-4 w-4">
                 <Image
                   src="/images/social/whatsapp.png"
-                  alt="WhatsApp icon"
+                  alt=""
                   fill
                   className="object-contain"
                   sizes="16px"

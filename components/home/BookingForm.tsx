@@ -36,13 +36,18 @@ ${message}`;
     <form
       onSubmit={handleSubmit}
       className="space-y-4 text-xs text-slate-700"
+      aria-label="Booking request form"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-1">
-          <label className="block text-[11px] font-semibold text-slate-800">
+          <label
+            htmlFor="booking-full-name"
+            className="block text-[11px] font-semibold text-slate-800"
+          >
             Full name
           </label>
           <input
+            id="booking-full-name"
             type="text"
             required
             value={fullName}
@@ -50,11 +55,16 @@ ${message}`;
             className="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-xs outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-200"
           />
         </div>
+
         <div className="space-y-1">
-          <label className="block text-[11px] font-semibold text-slate-800">
+          <label
+            htmlFor="booking-phone"
+            className="block text-[11px] font-semibold text-slate-800"
+          >
             WhatsApp / Phone number
           </label>
           <input
+            id="booking-phone"
             type="tel"
             required
             value={phone}
@@ -66,10 +76,14 @@ ${message}`;
 
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-1">
-          <label className="block text-[11px] font-semibold text-slate-800">
+          <label
+            htmlFor="booking-type"
+            className="block text-[11px] font-semibold text-slate-800"
+          >
             Booking type
           </label>
           <select
+            id="booking-type"
             value={bookingType}
             onChange={(e) => setBookingType(e.target.value)}
             className="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-xs outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-200"
@@ -82,11 +96,16 @@ ${message}`;
             <option>Other request</option>
           </select>
         </div>
+
         <div className="space-y-1">
-          <label className="block text-[11px] font-semibold text-slate-800">
+          <label
+            htmlFor="booking-date"
+            className="block text-[11px] font-semibold text-slate-800"
+          >
             Date
           </label>
           <input
+            id="booking-date"
             type="date"
             required
             value={date}
@@ -97,10 +116,14 @@ ${message}`;
       </div>
 
       <div className="space-y-1">
-        <label className="block text-[11px] font-semibold text-slate-800">
+        <label
+          htmlFor="booking-message"
+          className="block text-[11px] font-semibold text-slate-800"
+        >
           Short message
         </label>
         <textarea
+          id="booking-message"
           rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -117,6 +140,7 @@ ${message}`;
         <button
           type="submit"
           className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-5 py-2 text-[11px] font-semibold text-white shadow-sm hover:opacity-90 transition"
+          aria-label="Send booking request via WhatsApp"
         >
           Send booking via WhatsApp
         </button>
