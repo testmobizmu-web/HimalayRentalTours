@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_LINK =
-  "https://wa.me/23057581799?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20more%20information%20about%20rentals%20and%20tours%20in%20Mauritius.";
+  "https://wa.me/23057014922?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20more%20information%20about%20rentals%20and%20tours%20in%20Mauritius.";
 
 export default function ContactPage() {
   return (
@@ -68,7 +68,7 @@ export default function ContactPage() {
               <div className="space-y-1">
                 <p>
                   <span className="font-semibold text-slate-900">WhatsApp:</span>{" "}
-                  +230 5758 1799
+                  +230 5701 4922
                 </p>
                 <p>
                   <span className="font-semibold text-slate-900">Phone:</span>{" "}
@@ -143,7 +143,7 @@ export default function ContactPage() {
                       to book. We reply with clear options and prices.
                     </p>
                     <p className="mt-1 font-medium text-slate-900">
-                      +230 5758 1799
+                      +230 5701 4922
                     </p>
                   </div>
                   <div className="pt-3">

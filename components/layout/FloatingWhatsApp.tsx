@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "+23057581799";
+const WHATSAPP_NUMBER = "+23057014922";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hello, I would like to chat with Himalay Rental Tours about rentals, excursions or boat trips in Mauritius."
 );

@@ -23,7 +23,7 @@ export default function RentalsPage() {
     provider: {
       "@type": "TravelAgency",
       name: "Himalay Rental Tours",
-      telephone: "+23057581799",
+      telephone: "+23057014922",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Petit Paquet, Montagne Blanche",
@@ -197,7 +197,7 @@ export default function RentalsPage() {
                   {/* BOOK NOW BUTTON */}
                   <div className="flex flex-wrap gap-3 pt-2 items-center">
                     <a
-                      href="https://wa.me/23057581799?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20book%20a%20rental.%20Please%20share%20availability%20and%20prices."
+                      href="https://wa.me/23057014922?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20book%20a%20rental.%20Please%20share%20availability%20and%20prices."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:opacity-90 transition"

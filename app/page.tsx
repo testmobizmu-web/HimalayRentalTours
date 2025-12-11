@@ -19,7 +19,7 @@ export default function HomePage() {
     "@type": "TravelAgency",
     name: "Himalay Rental Tours",
     url: "https://www.himalayrentaltours.mu/",
-    telephone: "+23057581799",
+    telephone: "+23057014922",
     email: "himalayrentaltours@outlook.com",
     address: {
       "@type": "PostalAddress",

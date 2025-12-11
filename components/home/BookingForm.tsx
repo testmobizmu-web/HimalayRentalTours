@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 
-const WHATSAPP_NUMBER = "+23057581799";
+const WHATSAPP_NUMBER = "+23057014922";
 
 export function BookingForm() {
   const [fullName, setFullName] = useState("");

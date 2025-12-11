@@ -127,7 +127,7 @@ export function MainHeader() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://wa.me/23057581799?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Mauritius%20holiday."
+              href="https://wa.me/23057014922?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Mauritius%20holiday."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-4 py-2 text-xs font-semibold text-white shadow-md hover:opacity-90 transition"
@@ -196,7 +196,7 @@ export function MainHeader() {
               })}
 
               <a
-                href="https://wa.me/23057581799?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Mauritius%20holiday."
+                href="https://wa.me/23057014922?text=Hello%20Himalay%20Rental%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Mauritius%20holiday."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-teal-400 to-emerald-400 px-4 py-2 text-xs font-semibold text-white shadow-md hover:opacity-90 transition"
